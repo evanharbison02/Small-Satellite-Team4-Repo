@@ -27,15 +27,18 @@ Serial.begin(115200);
 void pitch(int direction, int time){
 
   if(direction !=1 && direction !=2){
+    Serial.out("Invalid direction Entered please try again");
     return; 
   }
 
   if(direction == 1){
+    Serial.out("Direction = 1, air core pin1 running");
     digitalWrite(airCorePin1,HIGH);
     delay(time);
     digitalWrite(airCorePin1, LOW);
   }
   if(direction == 0){
+    Serial.out("Direction = 0, air core pin2 running");
     digitalWrite(airCorePin2,HIGH);
     delay(time);
     digitalWrite(airCorePin2, LOW);
@@ -46,15 +49,18 @@ void pitch(int direction, int time){
 void yaw(int direction, int time) {
 
   if(direction !=1 && direction !=2){
+     Serial.out("Invalid direction Entered please try again");
     return; 
   }
 
   if(direction == 1){
+    Serial.out("Direction = 1, soild core1 pin1 running");
     digitalWrite(solidCore1Pin1,HIGH);
     delay(time);
     digitalWrite(solidCore1Pin1, LOW);
   }
   if(direction == 0){
+    Serial.out("Direction = 0, soild core1 pin2 running");
     digitalWrite(solidCore1Pin2,HIGH);
     delay(time);
     digitalWrite(solidCore1Pin2, LOW);
@@ -65,15 +71,18 @@ void yaw(int direction, int time) {
 void roll(int direction,int time){
 
   if(direction !=1 && direction !=2){
+     Serial.out("Invalid direction Entered please try again");
     return; 
   }
   
   if(direction == 1){
+    Serial.out("Direction = 1, soild core2 pin1 running");
     digitalWrite(solidCore2Pin1,HIGH);
     delay(time);
     digitalWrite(solidCore2Pin1, LOW);
   }
   if(direction == 0){
+    Serial.out("Direction = 0, soild core2 pin2 running");
     digitalWrite(solidCore2Pin2,HIGH);
     delay(time);
     digitalWrite(solidCore2Pin2, LOW);
